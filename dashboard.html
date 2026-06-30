@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>Student Dashboard</title>
 </head>
 <body>
 
 <h1>Student Dashboard</h1>
 
 <h3>Profile</h3>
-<p>Name: Student</p>
+
+<p>Name: <span id="studentName"></span></p>
 <p>Department: BSc Computer Science (AI)</p>
 
 <h3>Enrolled Courses</h3>
+
 <ul>
     <li>Python Programming - 80% Completed</li>
     <li>Full Stack Development - 60% Completed</li>
@@ -20,12 +22,34 @@
 
 <h3>Learning Progress</h3>
 
-<progress value="80" max="100"></progress>
+<progress value="60" max="100"></progress>
+
 <p>Overall Progress: 60%</p>
 
-<button>Browse Courses</button>
-<button>Continue Learning</button>
-<button>Logout</button>
+<br><br>
+
+<button onclick="browseCourses()">Browse Courses</button>
+
+<button onclick="continueLearning()">Continue Learning</button>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+document.getElementById("studentName").innerHTML = localStorage.getItem("studentName");
+
+function browseCourses() {
+    window.location.href = "courses.html";
+}
+
+function continueLearning() {
+    window.location.href = "learning.html";
+}
+
+function logout() {
+    localStorage.removeItem("studentName");
+    window.location.href = "index.html";
+}
+</script>
 
 </body>
 </html>
