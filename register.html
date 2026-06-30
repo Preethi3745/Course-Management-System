@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Register</title>
+    <title>Register</title>
 </head>
 <body>
 
 <h2>Student Registration</h2>
-<form action="login.html">
+
+<form onsubmit="saveData(event)">
+
 <label>Name:</label><br>
-<input type="text" required><br><br>
+<input type="text" id="name" required><br><br>
 
 <label>Email:</label><br>
 <input type="email" required><br><br>
@@ -23,7 +25,21 @@
 <input type="password" required><br><br>
 
 <button type="submit">Register</button>
+
 </form>
+
+<script>
+function saveData(event)
+{
+    event.preventDefault();
+
+    let studentName = document.getElementById("name").value;
+
+    localStorage.setItem("studentName", studentName);
+
+    window.location.href = "login.html";
+}
+</script>
 
 </body>
 </html>
