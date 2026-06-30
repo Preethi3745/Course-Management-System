@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Student Course Management System</title>
+    <title>Student Course Management System</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:linear-gradient(to right,#6a11cb,#2575fc);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            width:450px;
+            text-align:center;
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            color:#6a11cb;
+        }
+
+        h3{
+            color:#2575fc;
+        }
+
+        ul{
+            text-align:left;
+            margin-left:60px;
+            line-height:2;
+        }
+
+        button{
+            padding:12px 25px;
+            margin:15px;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+            color:white;
+            transition:0.3s;
+        }
+
+        .register{
+            background:#28a745;
+        }
+
+        .register:hover{
+            background:#218838;
+        }
+
+        .login{
+            background:#ff5722;
+        }
+
+        .login:hover{
+            background:#e64a19;
+        }
+
+        a{
+            text-decoration:none;
+        }
+    </style>
+
 </head>
+
 <body>
-<h1>Welcome to the online learning platform</h1>
+
+<div class="container">
+
+<h1>Student Course Management System</h1>
+
 <h3>Available Courses</h3>
+
 <ul>
-<li>Python Programming</li>
-<li>Full Stack Development</li>
-<li>Artificial Intelligence</li>
-<li>Data Science</li>
+    <li> Python Programming</li>
+    <li> Full Stack Development</li>
+    <li> Artificial Intelligence</li>
+    <li> Data Science</li>
 </ul>
+
 <a href="register.html">
-<button>Register</button>
+    <button class="register">Register</button>
 </a>
+
 <a href="login.html">
-<button>Login</button>
+    <button class="login">Login</button>
 </a>
+
+</div>
+
 </body>
 </html>
