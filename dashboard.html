@@ -10,7 +10,7 @@
 <h3>Profile</h3>
 
 <p>Name: <span id="studentName"></span></p>
-<p>Department: <span id="dep"></span></p>
+<p>Department: <span id="depName"></span></p>
 
 <h3>Enrolled Courses</h3>
 
@@ -33,7 +33,7 @@
 
 <script>
 document.getElementById("studentName").innerHTML = localStorage.getItem("studentName");
-document.getElementById("dep").innerHTML = localStorage.getItem("dep");
+document.getElementById("depName").innerHTML = localStorage.getItem("depName");
 function browseCourses() {
     window.location.href = "courses.html";
 }
@@ -44,7 +44,7 @@ function continueLearning() {
 
 function logout() {
     localStorage.removeItem("studentName");
-    localStorage.removeItem("dep");    
+    localStorage.removeItem("depName");    
     window.location.href = "index.html";
 }
 </script>
