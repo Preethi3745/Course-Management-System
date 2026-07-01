@@ -37,6 +37,7 @@ function saveData(event)
     let depName = document.getElementById("text").value;
 
     localStorage.setItem("studentName", studentName);
+    localStorage.setItem("depName",depName)
 
     window.location.href = "login.html";
 }
