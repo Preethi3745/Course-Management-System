@@ -16,7 +16,7 @@
 <input type="email" required><br><br>
 
 <label>Department:</label><br>
-<input type="text" required><br><br>
+<input type="text" id="dep" required><br><br>
 
 <label>Password:</label><br>
 <input type="password" required><br><br>
@@ -34,7 +34,7 @@ function saveData(event)
     event.preventDefault();
 
     let studentName = document.getElementById("name").value;
-    let depName = document.getElementById("text").value;
+    let depName = document.getElementById("dep").value;
 
     localStorage.setItem("studentName", studentName);
     localStorage.setItem("depName",depName)
