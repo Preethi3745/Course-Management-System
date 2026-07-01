@@ -10,7 +10,7 @@
 <h3>Profile</h3>
 
 <p>Name: <span id="studentName"></span></p>
-<p>Department: BSc Computer Science (AI)</p>
+<p>Department: <span id="depName"></span></p>
 
 <h3>Enrolled Courses</h3>
 
@@ -33,7 +33,7 @@
 
 <script>
 document.getElementById("studentName").innerHTML = localStorage.getItem("studentName");
-
+document.getElementById("depName").innerHTML = localStorage.getItem("depName");
 function browseCourses() {
     window.location.href = "courses.html";
 }
